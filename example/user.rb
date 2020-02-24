@@ -1,4 +1,7 @@
-class User < ActiveRecord
+class User < ActiveRecord::Base
+  # including Model will give you an index_as_action! method
+  # which uses the proper ScopeResponder
+  include SmartAPI::Model
 
   # scopes
   scope :with_first_name, lambda {|val|
@@ -73,7 +76,7 @@ class User < ActiveRecord
 
   # scope responding
 
-  class ScopeResponder < SmartAPI::ActiveModelScopeResponder
+  class ScopeResponder < SmartAPI::ActiveRecordScopeResponder
     def base_scope
       UserPolicy::Scope.new(request_context.actor, User).resolve
     end

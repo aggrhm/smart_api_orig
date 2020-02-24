@@ -11,6 +11,26 @@ module SmartAPI
   # Your code goes here...
   extend Helpers
 
+  class Configuration
+
+    def initialize
+      self.default_model_index_method = :index_as_action!
+      self.default_model_save_method = :update_as_action!
+      self.default_model_delete_method = :delete_as_action!
+      self.default_current_user_session_fields = ['id']
+    end
+
+    attr_accessor :default_model_index_method
+    attr_accessor :default_model_save_method
+    attr_accessor :default_model_delete_method
+
+    attr_accessor :default_current_user_session_fields
+  end
+
+  def self.config
+    @config ||= SmartAPI::Configuration.new
+  end
+
 end
 
 if defined?(Rails::Railtie)
