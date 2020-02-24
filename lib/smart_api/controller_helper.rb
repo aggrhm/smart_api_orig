@@ -74,7 +74,7 @@ module SmartAPI
         if defined?(model_class::ScopeResponder)
           cls = model_class::ScopeResponder
         else
-          cls = SmartAPI::ModelScopeResponder
+          cls = SmartAPI::ActiveRecordScopeResponder
         end
         cls.new(request_context, opts)
       end
@@ -114,7 +114,7 @@ module SmartAPI
       else
         serializer_name = obj.class.name.to_s.classify + 'Serializer'
       end
-      puts "Serialized used: " + serializer_name
+      puts "Serializer used: " + serializer_name
       return serializer_name.constantize
     end
 

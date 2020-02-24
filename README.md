@@ -1,15 +1,13 @@
 # SmartApi
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/smart_api`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A gem for smartly defining and managing a Rails API.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'smart_api'
+gem 'smart_api', github: 'agquick/smart_api'
 ```
 
 And then execute:
@@ -22,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+The goal of this gem is to define transactional methods that are easily, testable, traceable, and reusable. See the `example` directory to get a better sense of how to use this gem.
 
 ## Development
 

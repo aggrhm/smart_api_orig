@@ -4,6 +4,8 @@ require "smart_api/controller_helper"
 require "smart_api/request_context"
 require "smart_api/helpers"
 require "smart_api/scope_responder"
+require "smart_api/model"
+require "smart_api/errors"
 
 module SmartAPI
   # Your code goes here...

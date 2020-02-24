@@ -121,7 +121,7 @@ module SmartAPI
 
   end
 
-  class ModelScopeResponder < ScopeResponder
+  class ActiveRecordScopeResponder < ScopeResponder
 
     attr_reader :model
 
